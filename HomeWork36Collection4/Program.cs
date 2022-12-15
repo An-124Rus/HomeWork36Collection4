@@ -76,9 +76,9 @@
     {
         Console.Clear();
         Console.Write("Введите фамилию с большой буквы: ");
-        string name = Console.ReadLine().ToLower();
+        string name = Console.ReadLine();
 
-        if (dossiers.ContainsKey(name.ToLower()))
+        if (dossiers.ContainsKey(name))
         {
             Console.WriteLine($"{name} - {dossiers[name]}");
             Console.WriteLine("\nДля продолжения нажмите любую клавишу");
@@ -108,9 +108,9 @@
     {
         Console.Clear();
         Console.Write("Введите фамилию  с большой буквы: ");
-        string name = Console.ReadLine().ToLower();
+        string name = Console.ReadLine();
 
-        if (dossiers.ContainsKey(name.ToLower()))
+        if (dossiers.ContainsKey(name))
         {
             dossiers.Remove(name);
 
