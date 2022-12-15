@@ -2,11 +2,11 @@
 {
     private static void Main(string[] args)
     {
-        const string CreateAccount = "1";
-        const string OutputAccount = "2";
-        const string OutputAllAccounts = "3";
-        const string DeleteAccount = "4";
-        const string Exit = "5";
+        const string CreateAccountCommand = "1";
+        const string OutputAccountCommand = "2";
+        const string OutputAllAccountsCommand = "3";
+        const string DeleteAccountCommand = "4";
+        const string ExitCommand = "5";
 
         Dictionary<string, string> dossiers = new Dictionary<string, string>();
 
@@ -19,29 +19,29 @@
 
         while (isWorking)
         {
-            Console.WriteLine($"Для добавления досье нажмите  - {CreateAccount}");
-            Console.WriteLine($"Для вывода досье нажмите      - {OutputAccount}");
-            Console.WriteLine($"Для вывода всех досье нажмите - {OutputAllAccounts}");
-            Console.WriteLine($"Для удаления досье нажмите    - {DeleteAccount}");
-            Console.WriteLine($"Для выхода нажмите            - {Exit}\n");
+            Console.WriteLine($"Для добавления досье нажмите  - {CreateAccountCommand}");
+            Console.WriteLine($"Для вывода досье нажмите      - {OutputAccountCommand}");
+            Console.WriteLine($"Для вывода всех досье нажмите - {OutputAllAccountsCommand}");
+            Console.WriteLine($"Для удаления досье нажмите    - {DeleteAccountCommand}");
+            Console.WriteLine($"Для выхода нажмите            - {ExitCommand}\n");
 
             string userInput = Console.ReadLine();
 
             switch (userInput)
             {
-                case CreateAccount:
+                case CreateAccountCommand:
                     Program.CreateAccount(dossiers);
                     break;
-                case OutputAccount:
+                case OutputAccountCommand:
                     Program.OutputAccount(dossiers);
                     break;
-                case OutputAllAccounts:
+                case OutputAllAccountsCommand:
                     Program.OutputAllAccounts(dossiers);
                     break;
-                case DeleteAccount:
+                case DeleteAccountCommand:
                     Program.DeleteAccount(dossiers);
                     break;
-                case Exit:
+                case ExitCommand:
                     isWorking = false;
                     break;
             }
@@ -49,6 +49,7 @@
             Console.Clear();
         }
     }
+
     static void CreateAccount(Dictionary<string, string> dossiers)
     {
         Console.Clear();
