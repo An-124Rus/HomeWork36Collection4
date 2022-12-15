@@ -17,6 +17,7 @@
         Console.Clear();
         Console.Write("Введите фамилию с большой буквы: ");
         string name = Console.ReadLine();
+
         Console.Write("Введите должность: ");
         string post = Console.ReadLine();
 
